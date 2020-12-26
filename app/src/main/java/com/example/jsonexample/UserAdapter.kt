@@ -47,8 +47,13 @@ class UserAdapter(val context: Context, val items: ArrayList<UserModelClass>) :
         holder.tvGender.text = item.gender
         holder.tvWeight.text = item.weight.toString()
         holder.tvHeight.text = item.height.toString()
-        holder.tvMobileNumber.text = item.mobile
-        holder.tvOfficeNumber.text = item.office
+//        holder.tvMobileNumber.text = item.mobile
+//        holder.tvOfficeNumber.text = item.office
+        
+
+        //using data class we have
+        holder.tvMobileNumber.text = item.phone.mobile
+        holder.tvOfficeNumber.text = item.phone.office
     }
 
     /**
