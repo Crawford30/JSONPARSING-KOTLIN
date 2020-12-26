@@ -77,8 +77,14 @@ class MainActivity : AppCompatActivity() {
         try {
             val myUsersJSONFile = assets.open("Users.json")
             val size = myUsersJSONFile.available()
+
+            //store in the buffer
             val buffer = ByteArray(size)
+
+            //read it from buffer
             myUsersJSONFile.read(buffer)
+
+            //close the buffer
             myUsersJSONFile.close()
             json = String(buffer, charset)
         } catch (ex: IOException) {
